@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- может встречаться кирилический текст -->
+	<meta charset="UTF-8">
+	<!--  -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- вместить всю ширину сайта на девайс пользователя -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Название вкладки -->
+	<title>FindYourJob</title>
+	<!-- подключяем bootstrap к html -->
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<!-- подключаем необходимые шрифты -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+	<!-- подключаем css к html -->
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<!-- шапка сайта -->
+	<header class="header">
+		<!-- рамки блока -->
+		<div class="conteiner">
+			<!-- блок- строка -->
+			<!-- .align-items-center(bootstrap)- выравнивает все элементы по горизонтальной оси -->
+			<!-- .py-3(bootstrap)- padding по оси Y который = 3px -->
+			<div class="row align-items-center py-3">
+				<!-- делим на три равные части c помощью .col из bootstrap -->
+				<!-- .col*3 -->
+
+				<!-- логотип -->
+				<!-- col-2- занимает 2 колонки из 12шт  -->
+				<div class="col-2">
+					<!-- логотип как ссылка -->
+					<a href="/" class="logo-link"><img src='img/logo.svg' alt='logo: FindYourJob'></a>
+				</div>
+				<!-- /.col -->
+
+				<!-- меню  -->
+				<div class="col d-flex justify-content-center">
+					<nav class="nav">
+						<!-- ul-маркированный список -->
+						<!-- выстраиваем заголовки меню в ряд с помощью .d-flex из bootstrap -->
+						<ul class="menu d-flex">
+							<li class="menu-item"><a href="#" class="menu-link">Главная</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Вакансии</a></li>
+							<li class="menu-item"><a href="#" class="menu-link">Компании</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.col -->
+
+				<!-- блок авторизации -->
+				<!-- .justify-content-end- прижимаем элемент к правому краю -->
+				<!-- col-3- занимает 3 колонки из 12шт  -->
+				<div class="col-3 d-flex align-items-center justify-content-end">
+					<a href="#" class="button button-link">Войти</a>
+					<a href="#" class="button button-primary">Регистрация</a>
+
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.conteiner -->
+	</header>
+</body>
+
+</html>
