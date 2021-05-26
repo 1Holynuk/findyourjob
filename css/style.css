@@ -1,3 +1,10 @@
+/* для всех элементов, таких как *:before, *:after - будет работать правило: */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	/* подключаем шрифты для всего сайта */
@@ -6,7 +13,9 @@ body {
 	font-size: 16px;
 	color: #111238;
 }
-
+.header {
+	background: #f2f3f6;
+}
 .menu {
 	/* убираем точки в названии меню */
 	list-style: none;
@@ -31,6 +40,9 @@ body {
 	text-decoration: none;
 	/* inline-block- чтоб кнопке можно было задавать отступы */
 	display: inline-block;
+	/* убираем обвадку */
+	border: none;
+	font-size: 16px;
 }
 .button-link {
 	color: #111238;
@@ -46,4 +58,92 @@ body {
 	padding-bottom: 15px;
 	padding-left: 30px;
 	color: #fff;
+}
+.button-icon {
+	/* вертикальное выравнивание по середине */
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.button-text {
+	vertical-align: middle;
+}
+.hero-title {
+	font-size: 44px;
+	line-height: 53px;
+	margin-bottom: 15px;
+	/* отступ от верхнего края картинки */
+	margin-top: 43px;
+}
+.hero-text {
+	font-size: 18px;
+	line-height: 140%;
+	margin-bottom: 30px;
+}
+.input-group {
+	background: #ffffff;
+	border: 1px solid rgba(209, 209, 209, 0.1);
+	box-sizing: border-box;
+	box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+.input {
+	background-color: #fff;
+	/* убираем обводку */
+	border: none;
+	/* занимать всё свободное пространство, но не искажать кнопку */
+	flex-grow: 1;
+	font-size: 16px;
+	line-height: 19px;
+	padding-left: 15px;
+}
+.input:focus {
+	/* когда в фокусе, поменять цвет на красный */
+	outline-color: red;
+}
+.tags-group {
+	padding-left: 15px;
+	color: #b2b2b2;
+	font-size: 14px;
+	line-height: 17px;
+}
+.tag {
+	color: #b2b2b2;
+	/* убираем подчёркивание */
+	text-decoration: none;
+	padding: 5px 10px;
+	margin-left: 10px;
+	border: 1px solid #b2b2b2;
+	border-radius: 5px;
+}
+.selection {
+	padding-top: 70px;
+	padding-bottom: 80px;
+}
+.section-title {
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+.card {
+	text-decoration: none;
+	color: #111238;
+	background: #f2f3f6;
+	border-radius: 10px;
+	padding: 35px;
+	/* анимация */
+	transition: background 0.2s, color 0.2s;
+}
+.card:hover {
+	background: #1a75e8;
+	color: #fff;
+}
+.card:hover .card-icon {
+	fill: #fff;
+}
+.card-icon {
+	/* цвет иконок в icons.svg */
+	fill: #111238;
+	margin-bottom: 15px;
+	transition: fill 0.2s;
 }
